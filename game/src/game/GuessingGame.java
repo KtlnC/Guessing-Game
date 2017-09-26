@@ -21,6 +21,7 @@ public class GuessingGame {
 		boolean isNumber = false;
 		int answer = (int) (Math.random() * 10 + 1);
 		int guess = 0;
+		//guess should be changed in the while loop
 		while(guess != answer)
 		{
 			while(!isNumber)
@@ -32,7 +33,7 @@ public class GuessingGame {
 					isNumber = true;
 					
 				}
-				catch(Input MisMatch Exception e)
+				catch(InputMismatchException e)
 				{
 					System.out.println("That was error type: " + e);
 				}				
