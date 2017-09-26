@@ -1,7 +1,13 @@
+/*	
+ * Name: Guessing Game
+ * Author: Kaitlyn Cao	
+ * Date: 9/26/17
+ */
+
 package game;
 
 import java.util.Scanner;
-import java.
+import java.util.InputMismatchException;
 public class GuessingGame {
 	private static Scanner input;
 
@@ -12,19 +18,24 @@ public class GuessingGame {
 		String s = input.next();
 		System.out.println("Nice to meet you, " + s);
 		
+		boolean isNumber = false;
 		int answer = (int) (Math.random() * 10 + 1);
 		int guess = 0;
 		while(guess != answer)
 		{
-			try
+			while(!isNumber)
 			{
-				System.out.println("Pick a number from 1 - 10");
-				input.nextInt();
-				
-			}
-			catch(Input MisMatch Exception e)
-			{
-				System.out.println("That was error type: " + e);
+				try
+				{
+					System.out.println("Pick a number from 1 - 10");
+					input.nextInt();
+					isNumber = true;
+					
+				}
+				catch(Input MisMatch Exception e)
+				{
+					System.out.println("That was error type: " + e);
+				}				
 			}
 		}
 	}
