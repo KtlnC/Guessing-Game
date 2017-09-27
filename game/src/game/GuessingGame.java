@@ -32,11 +32,12 @@ public class GuessingGame {
 					isNumber = true;
 					
 				}
-				catch(Input MisMatch Exception e)
+				catch(InputMismatchException e)
 				{
 					System.out.println("That was error type: " + e);
 				}				
 			}
+
 		}
 	}
 }
