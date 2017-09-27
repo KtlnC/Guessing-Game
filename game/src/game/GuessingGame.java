@@ -8,20 +8,20 @@ package game;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
-public class GuessingGame {
+public class GuessingGame
+{
+	//next line is unnecessary, so is the close statement
 	private static Scanner input;
-
 	public static void main(String[] args)
 	{
   		input = new Scanner(System.in);
 		System.out.println("What is your name?");
 		String s = input.next();
 		System.out.println("Nice to meet you, " + s);
-		
 		boolean isNumber = false;
 		int answer = (int) (Math.random() * 10 + 1);
 		int guess = 0;
-		//guess should be changed in the while loop
+		//use input.reset() in the inner loop
 		while(guess != answer)
 		{
 			while(!isNumber)
@@ -31,7 +31,6 @@ public class GuessingGame {
 					System.out.println("Pick a number from 1 - 10");
 					guess = input.nextInt();
 					isNumber = true;
-					
 				}
 				catch(InputMismatchException e)
 				{
@@ -45,18 +44,12 @@ public class GuessingGame {
 			if(guess < answer)
 			{
 				System.out.println("That's too low. Try again.");
-
 			}
 			if(guess == answer)
 			{
 				System.out.println("Good job! You guessed it!");
 			}			
-
 		}
 		input.close();
-		
 	}
 }
-
-
- 
