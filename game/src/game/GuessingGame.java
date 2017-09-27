@@ -40,12 +40,12 @@ public class GuessingGame {
 			}
 			if(guess > answer)
 			{
-				System.out.println("That's too high. Try again.");				
+				System.out.println("That's too high. Try again.");	
+				
 			}
 			if(guess < answer)
 			{
 				System.out.println("That's too low. Try again.");
-
 			}
 			if(guess == answer)
 			{
