@@ -29,7 +29,7 @@ public class GuessingGame {
 				try
 				{
 					System.out.println("Pick a number from 1 - 10");
-					input.nextInt();
+					guess = input.nextInt();
 					isNumber = true;
 					
 				}
@@ -38,8 +38,23 @@ public class GuessingGame {
 					System.out.println("That was error type: " + e);
 				}				
 			}
+			if(guess > answer)
+			{
+				System.out.println("That's too high. Try again.");				
+			}
+			if(guess < answer)
+			{
+				System.out.println("That's too low. Try again.");
+
+			}
+			if(guess == answer)
+			{
+				System.out.println("Good job! You guessed it!");
+			}			
 
 		}
+		input.close();
+		
 	}
 }
 
